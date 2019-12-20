@@ -1,1 +1,15 @@
-<p>public-header works!</p>
+<header class="public-header">
+  <nav class="public-header-navigation">
+    <ul class="public-header-navigation_list">
+      <li class="public-header-navigation_item">
+        <a [routerLink]="['/']" routerLinkActive="navigation-link-active" class="link-navigation">home</a>
+      </li>
+      <li class="public-header-navigation_item">
+        <a [routerLink]="['/page2']" routerLinkActive="navigation-link-active" class="link-navigation">page2</a>
+      </li>
+      <li class="public-header-navigation_item">
+        <a [routerLink]="['/page3']" routerLinkActive="navigation-link-active" class="link-navigation">page3</a>
+      </li>
+    </ul>
+  </nav>
+</header>
