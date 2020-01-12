@@ -1,0 +1,145 @@
+.public-footer-container {
+  background: url('/assets/public/footer/mountaines-panoram.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 40px 80px 0;
+  text-transform: uppercase;
+  color: rgba($color: #ffffff, $alpha: 0.6);
+
+  .public-footer-title {
+    border-top: 1px solid currentColor;
+    text-align: center;
+    padding-bottom: 40px;
+
+    .public-footer-title-description {
+      text-transform: initial;
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+  }
+
+  .public-footer-info-section {
+    .public-footer-info-list {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      border-top: 1px solid currentColor;
+      border-bottom: 1px solid currentColor;
+      list-style: none;
+
+      .public-footer-info-block {
+        flex: 1;
+
+        &:first-child {
+          padding-top: 20px;
+          padding-right: 40px;
+          // max-width: max-content;
+        }
+
+        &:not(:first-child) {
+          padding: 20px 40px;
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid currentColor;
+        }
+
+        .public-footer-bloc-info-title {
+          font-size: 14px;
+          font-family: sans-serif;
+          font-weight: bold;
+          color: #ffffff;
+        }
+
+        .block-info-menu-item {
+          font-family: sans-serif;
+          text-transform: capitalize;
+        }
+
+        .public-footer-logo {
+          display: flex;
+          align-items: center;
+
+          .social-element {
+            position: relative;
+            width: 20px;
+            height: 20px;
+            // border-left: 2px solid #ffffff;
+            // border-right: 2px solid #ffffff;
+            box-sizing: content-box;
+
+            .masking-element {
+              width: 100%;
+              height: 100%;
+              display: inline-block;
+              background-color: #ffffff;
+              mask-repeat: no-repeat;
+              mask-position: center;
+              mask-size: contain;
+
+              &.facebook {
+                mask-image: url(/assets/public/footer/icons/facebook.svg);
+              }
+
+              &.instagram {
+                mask-image: url(/assets/public/footer/icons/instagram.svg);
+              }
+
+              &.flickr {
+                mask-image: url(/assets/public/footer/icons/flickr.svg);
+              }
+
+              &.twitter {
+                mask-image: url(/assets/public/footer/icons/twitter.svg);
+              }
+            }
+
+            &:not(:last-child) {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .privacy-policy-wrapper {
+    padding: 20px 0;
+
+    .privacy-content-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      color: #ffffff;
+
+      .privacy-content-item {
+        .privacy-content {
+          padding: 0;
+          margin: 0;
+          font-family: sans-serif;
+          font-size: 16px;
+          text-transform: none;
+          line-height: 16px;
+
+          &.copyright {
+            &:before {
+              content: '';
+              display: inline-block;
+              width: 16px;
+              height: 16px;
+              mask: url(/assets/copyright/copyright-regular.svg);
+              mask-repeat: no-repeat;
+              mask-position: center;
+              mask-size: contain;
+              background-color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
