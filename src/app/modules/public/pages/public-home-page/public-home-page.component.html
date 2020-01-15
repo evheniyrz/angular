@@ -1,1 +1,29 @@
-<p>public-home-page works!</p>
+<section class="home-page-content">
+  <div class="home-page-title-container">
+    <div class="home-page-title content-wrapper">
+      <h4 class="home-page-title">leading the evolution in</h4>
+      <h2 class="home-page-title-description">ultralight cycling</h2>
+    </div>
+    <div class="navigation-in-title-container content-wrapper">
+      <a class="content-viewed-link">
+        view products
+      </a>
+      <a (click)="scrollTo('content_menu')" class="navigation-scroll-down"></a>
+    </div>
+  </div>
+  <div id=content_menu class="public-home-page-content-container">
+    <ul class="hex-menu-container">
+      <li *ngFor="let item of menuContent;" class="hex-menu-item" [ngStyle]="item.bgImageUrl">
+        <div class="sponge"></div>
+        <div class="menu-elements-wrapper">
+          <div class="action-container">
+            <p class="hex-menu-item-title">
+              {{item.menuTitle}}
+            </p>
+            <a [routerLink]="item.menuNavUrl" class="hex-menu-item-nav-btn">view source</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
