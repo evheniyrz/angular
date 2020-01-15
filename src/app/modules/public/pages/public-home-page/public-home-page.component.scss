@@ -1,0 +1,157 @@
+$white_background_hover: rgba(255, 255, 255, 0.15);
+
+.home-page-content {
+
+
+  .home-page-title-container {
+    background: linear-gradient(transparent, #a39a8a 97%), url(/assets/public/home/highway-road.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 70px 0;
+
+    .home-page-title {
+      .home-page-title {
+        margin-top: 0;
+        font-size: 25px;
+        font-weight: normal;
+        padding-top: 80px;
+      }
+
+      .home-page-title-description {
+        margin-top: 0;
+        font-size: 75px;
+      }
+    }
+
+
+    .navigation-in-title-container {
+      padding-bottom: 80px;
+
+      .content-viewed-link {
+        display: inline-block;
+        border: 1px solid currentColor;
+        padding: 13px 20px;
+        border-radius: 5px;
+        line-height: 17px;
+        font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+        cursor: pointer;
+
+        &:hover {
+          background: $white_background_hover;
+        }
+      }
+
+      .navigation-scroll-down {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+
+        mask: url(/assets/shevrons/shevron-down-light.svg);
+        background-color: currentColor;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .public-home-page-content-container {
+    background-color: #a39a8a;
+    padding: 50px 40px;
+
+    .hex-menu-container {
+      padding: 0;
+      margin: 0 auto;
+      list-style: none;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      max-width: 900px;
+
+      .hex-menu-item {
+        width: calc(100% / 3 - 5px);
+        min-width: 240px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        color: #ffffff;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        position: relative;
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%, 50% 0);
+
+        &:nth-child(n + 4) {
+          margin-top: -8.1%;
+        }
+
+        &:hover {
+          .menu-elements-wrapper {
+            .action-container {
+              transform: scale(1);
+            }
+          }
+        }
+
+        .sponge {
+          padding-bottom: 100%;
+          width: 100%;
+        }
+
+        .menu-elements-wrapper {
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          top: 0;
+          left: 0;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          background: rgba(0, 0, 0, 0.3);
+
+          .action-container {
+            margin-top: auto;
+            margin-bottom: 30%;
+            text-align: center;
+            transform: scale(0.9);
+            transition: all 350ms ease-in-out;
+            will-change: transform;
+
+            .hex-menu-item-title {
+              text-transform: uppercase;
+              font-family: Arial, sans-serif;
+              font-size: 23px;
+            }
+
+            .hex-menu-item-nav-btn {
+              display: inline-block;
+              border: 1px solid currentColor;
+              border-radius: 3px;
+              padding: 10px 15px;
+              font-family: sans-serif;
+              font-size: 20px;
+              color: #ffffff;
+              text-transform: uppercase;
+              text-decoration: none;
+
+              &:hover {
+                background-color: $white_background_hover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content-wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: sans-serif;
+  }
+}
