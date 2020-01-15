@@ -34,7 +34,7 @@ $white_background_hover: rgba(255, 255, 255, 0.15);
         padding: 13px 20px;
         border-radius: 5px;
         line-height: 17px;
-        font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+        font-weight: bold;
         cursor: pointer;
 
         &:hover {
@@ -120,7 +120,6 @@ $white_background_hover: rgba(255, 255, 255, 0.15);
 
             .hex-menu-item-title {
               text-transform: uppercase;
-              font-family: Arial, sans-serif;
               font-size: 23px;
             }
 
@@ -129,7 +128,7 @@ $white_background_hover: rgba(255, 255, 255, 0.15);
               border: 1px solid currentColor;
               border-radius: 3px;
               padding: 10px 15px;
-              font-family: sans-serif;
+              font-weight: bold;
               font-size: 20px;
               color: #ffffff;
               text-transform: uppercase;
@@ -152,6 +151,6 @@ $white_background_hover: rgba(255, 255, 255, 0.15);
     justify-content: center;
     color: #ffffff;
     text-transform: uppercase;
-    font-family: sans-serif;
+    // font-family: sans-serif;
   }
 }
