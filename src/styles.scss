@@ -2,6 +2,13 @@
 @import './assets/fonts-sccs/font';
 
 $primary_font: 'Lato';
+$primary-fs: 16px;
+
+// Font size
+$font-xs:12px;
+$font-sm: 14px;
+$font-md: 18px;
+$font-lg: 20px;
 
 * {
   box-sizing: border-box;
@@ -13,4 +20,5 @@ body {
   margin: 0;
   scroll-behavior: smooth;
   font-family: $primary_font;
+  font-size: $primary-fs;
 }
