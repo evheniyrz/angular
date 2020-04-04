@@ -1,8 +1,23 @@
-<p>member-page works!</p>
-<button (click)="auth.logout()">LOGOUT</button>
-<a [routerLink]="['/']">HOME</a>
-<div class="profile">
-  <pre>
-    {{profile | json}}
-  </pre>
+<mat-toolbar>
+  <button mat-raised-button color="primary" (click)="sidenavToggle()" class="member-sidenav-toggle-button">
+    <mat-icon *ngIf="!opened">
+      menu
+    </mat-icon>
+    <mat-icon *ngIf="opened">
+      menu_open
+    </mat-icon>
+  </button>
+  member tools
+</mat-toolbar>
+<div class="member-area-container">
+  <mat-sidenav-container class="member-sidenav-container">
+    <mat-sidenav #memberSidenav [mode]="'over'" [(opened)]="opened">
+      <mat-nav-list>
+        <p>navigation will soon</p>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

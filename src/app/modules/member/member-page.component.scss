@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+.member-area-container {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+
+  .member-sidenav-container {
+    flex: 1;
+  }
+}
