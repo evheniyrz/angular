@@ -5,7 +5,7 @@
         <a [routerLink]="['/']" routerLinkActive="navigation-link-active" class="link-navigation">home</a>
       </li>
       <li class="public-header-navigation_item">
-        <a [routerLink]="['/page2']" routerLinkActive="navigation-link-active" class="link-navigation">page2</a>
+        <a [routerLink]="['/member']" routerLinkActive="navigation-link-active" class="link-navigation">member</a>
       </li>
       <li class="public-header-navigation_item">
         <a [routerLink]="['/page3']" routerLinkActive="navigation-link-active" class="link-navigation">page3</a>
@@ -13,7 +13,13 @@
     </ul>
 
     <div class="login-process-button-wrapper">
-      <a [routerLink]="['/login']" class="login-process-button">login</a>
+      <a *ngIf="!userAuthData; else userLoggedTemplate;" (click)="login();" class="login-process-button">
+        login
+      </a>
+      <ng-template #userLoggedTemplate>
+        <evh-profile-menu [userData]="userAuthData"></evh-profile-menu>
+      </ng-template>
+
     </div>
   </nav>
 </header>
