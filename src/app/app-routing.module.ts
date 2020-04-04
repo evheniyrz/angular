@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MemberGuard } from './modules/shared-member/guards/member.guard';
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
   },
   {
     path: 'member',
-    loadChildren: () => import('./modules/member/member.module').then(m => m.MemberModule)
+    loadChildren: () => import('./modules/member/member.module').then(m => m.MemberModule),
+    canActivate: [MemberGuard]
   }
 ];
 

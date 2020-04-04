@@ -1,1 +1,8 @@
 <p>member-page works!</p>
+<button (click)="auth.logout()">LOGOUT</button>
+<a [routerLink]="['/']">HOME</a>
+<div class="profile">
+  <pre>
+    {{profile | json}}
+  </pre>
+</div>
