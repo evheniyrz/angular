@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import './assets/fonts-sccs/font';
 
 $primary_font: 'Lato';
@@ -16,6 +17,9 @@ $font-lg: 20px;
 
 html,
 body {
+  // width: 100%;
+  // height: 100vh;
+  // overflow: auto;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
