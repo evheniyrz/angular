@@ -11,5 +11,33 @@
 
   .member-sidenav-container {
     flex: 1;
+
+    mat-sidenav {
+      .mat-nav-list {
+        .mat-list-item.member-area-navigation-item {
+          min-width: 280px;
+          border-bottom: 1px solid rgba($color: #000000, $alpha: 0.3);
+
+          &.home {
+            border-top: 1px solid rgba($color: #000000, $alpha: .3);
+            margin-top: -8px;
+
+            .mat-icon {
+              height: 21px;
+              width: 21px;
+              margin-right: 12px;
+
+              &.material-icons {
+                font-size: 21px;
+              }
+            }
+          }
+
+          .nav-link-text {
+            padding-top: 5px;
+          }
+        }
+      }
+    }
   }
 }
