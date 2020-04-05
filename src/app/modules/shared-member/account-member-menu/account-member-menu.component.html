@@ -1,0 +1,31 @@
+<div class="user-account-container">
+  <button [matMenuTriggerFor]="userAccountMenu" class="user-menu-trigger-button">
+    <span [ngStyle]="menuButtonStyleConfig" class="user-account-avatar"></span>
+  </button>
+  <mat-menu #userAccountMenu="matMenu" class="user-account-menu">
+    <p mat-menu-item class="user-account-menu-item user-account-menu-header">
+      <mat-icon matTooltip="User Name" class="user-account-icons">account_circle</mat-icon>
+      <span class="user-account-menu-title">{{profile.name}}</span>
+    </p>
+    <p mat-menu-item class="user-account-menu-item">
+      <mat-icon matTooltip="User Email" class="user-account-icons">alternate_email</mat-icon>
+      <span class="user-account-menu-item-title">email:&nbsp;</span>
+      <span class="user-account-menu-item-content">{{profile.email}}</span>
+    </p>
+    <p mat-menu-item class="user-account-menu-item">
+      <span class="user-account-menu-item-title"></span>
+      <span class="user-account-menu-item-content"></span>
+    </p>
+    <p mat-menu-item class="user-account-menu-item">
+      <span class="user-account-menu-item-title"></span>
+      <span class="user-account-menu-item-content"></span>
+    </p>
+    <p mat-menu-item class="user-account-menu-item user-account-menu-footer">
+      <button (click)="accountLogout()" class="user-account-logout-button">
+        <span class="logout-icon"></span>
+        <span class="logout-text">logout</span>
+      </button>
+    </p>
+
+  </mat-menu>
+</div>

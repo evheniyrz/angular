@@ -1,0 +1,110 @@
+:host {
+  margin-left: auto;
+}
+
+.user-account-container {
+  margin-left: auto;
+
+  .user-menu-trigger-button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 0;
+    overflow: hidden;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    .user-account-avatar {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+::ng-deep .user-account-menu {
+  margin-top: 15px;
+
+  .mat-menu-item {
+    margin: 0;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+
+    &.user-account-menu-header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      margin-top: -8px;
+    }
+
+    .mat-icon {
+      height: 21px;
+      width: 21px;
+      margin-right: 3px;
+
+      &.material-icons {
+        font-size: 21px;
+      }
+    }
+
+    .user-account-menu-item-title {
+      font-size: 14px;
+      color: rgba(0, 0, 0, .54);
+    }
+
+    &.user-account-menu-footer {
+      border-top: 1px solid rgba(0, 0, 0, 0.3);
+      padding-top: 5px;
+      margin-bottom: -8px;
+
+      .user-account-logout-button {
+        width: 100%;
+        background: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        padding-left: 10px;
+        padding-bottom: 8px;
+        cursor: pointer;
+        color: #999999;
+
+        &:hover {
+          color: #633229;
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+
+        .logout-icon {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          background-color: #c7c7c7c7;
+          mask: url(/assets/icons/sign-out-alt-solid.svg);
+          mask-repeat: no-repeat;
+          mask-position: center;
+          mask-size: contain;
+          -webkit-mask: url(/assets/icons/sign-out-alt-solid.svg);
+          -webkit-mask-repeat: no-repeat;
+          -webkit-mask-position: center;
+          -webkit-mask-size: contain;
+          margin-right: 10px;
+        }
+
+        .logout-text {
+          font-family: 'Lato', sans-serif;
+          font-size: 16px;
+          font-weight: bold;
+          text-transform: capitalize;
+          color: inherit;
+        }
+      }
+    }
+  }
+}

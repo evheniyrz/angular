@@ -12,18 +12,12 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class MemberPageComponent implements OnInit, OnDestroy {
 
   public opened = false;
-  public profile: any;
   private onDestroy$: Subject<boolean> = new Subject();
 
   @ViewChild('memberSidenav') private memberSidenav: MatSidenav;
-  constructor(public auth: AuthService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.auth.userProfile$.pipe(
-      takeUntil(this.onDestroy$)
-    ).subscribe(data => {
-      this.profile = data;
-    });
   }
 
   public sidenavToggle(): void {
