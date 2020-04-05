@@ -12,8 +12,12 @@
 </mat-toolbar>
 <div class="member-area-container">
   <mat-sidenav-container class="member-sidenav-container">
-    <mat-sidenav #memberSidenav [mode]="'over'" [(opened)]="opened">
+    <mat-sidenav #memberSidenav [mode]="'over'" [(opened)]="opened" class="member-sidenav">
       <mat-nav-list>
+        <a mat-list-item [routerLink]="'/'" matTooltip="Public Home Page" class="member-area-navigation-item home">
+          <mat-icon color="primary">home</mat-icon>
+          <span class="nav-link-text">Home</span>
+        </a>
         <p>navigation will soon</p>
       </mat-nav-list>
     </mat-sidenav>
