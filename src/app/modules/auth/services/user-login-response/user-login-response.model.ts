@@ -5,6 +5,7 @@ export interface LoggedUser {
   'name': string; // 'Yevgeny Reznitchenko'
   'picture': string;
   'updated_at': string; // '2020-01-25T14:20:27.487Z'
+  'email': string;
   'email_verified': boolean;
   'sub': string; // 'facebook|3472672882805910'
 }

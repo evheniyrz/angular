@@ -1,5 +1,5 @@
 <mat-toolbar>
-  <button mat-raised-button color="primary" (click)="sidenavToggle()" class="member-sidenav-toggle-button">
+  <button mat-icon-button color="primary" (click)="sidenavToggle()" class="member-sidenav-toggle-button">
     <mat-icon *ngIf="!opened">
       menu
     </mat-icon>
@@ -8,6 +8,7 @@
     </mat-icon>
   </button>
   member tools
+  <evh-account-member-menu></evh-account-member-menu>
 </mat-toolbar>
 <div class="member-area-container">
   <mat-sidenav-container class="member-sidenav-container">
