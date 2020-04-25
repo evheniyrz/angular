@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { AccountMemberMenuComponent } from './account-member-menu/account-member-menu.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { EvhMenuModuleModule } from './directives/evh-menu-module/evh-menu-module.module';
 
 @NgModule({
   declarations: [AccountMemberMenuComponent],
@@ -19,7 +20,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatListModule,
     MatButtonModule,
     MatMenuModule,
-    MatTooltipModule
+    MatTooltipModule,
+    EvhMenuModuleModule
   ],
   exports: [
     MatToolbarModule,
@@ -29,7 +31,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatButtonModule,
     AccountMemberMenuComponent,
     MatMenuModule,
-    MatTooltipModule
+    MatTooltipModule,
+    EvhMenuModuleModule
   ]
 })
 export class SharedMemberModule { }

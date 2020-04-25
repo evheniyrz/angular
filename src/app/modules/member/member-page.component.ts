@@ -12,16 +12,36 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class MemberPageComponent implements OnInit, OnDestroy {
 
   public opened = false;
+  public headderTitleContent: { [key: string]: string }[];
   private onDestroy$: Subject<boolean> = new Subject();
 
   @ViewChild('memberSidenav') private memberSidenav: MatSidenav;
   constructor() { }
 
   ngOnInit() {
+    this.headderTitleContent = this.createHeaderTitle('space exploration');
   }
 
   public sidenavToggle(): void {
     this.memberSidenav.toggle();
+  }
+
+  private createHeaderTitle(value: string): { [key: string]: string }[] {
+    const resource: { [key: string]: string }[] = [];
+    let fontSize;
+    for (let i = 0; i < value.length; i++) {
+      let charConfig;
+      if (i < value.length / 2) {
+        fontSize = 13 + i * 2;
+        charConfig = { [value.charAt(i)]: `${fontSize}px` };
+      } else {
+        fontSize = fontSize - 2;
+        charConfig = { [value.charAt(i)]: `${fontSize}px` };
+      }
+      resource.push(charConfig);
+      charConfig = null;
+    }
+    return resource;
   }
 
   ngOnDestroy() {

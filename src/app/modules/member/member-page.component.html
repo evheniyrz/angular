@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar class="member-page-header">
   <button mat-icon-button color="primary" (click)="sidenavToggle()" class="member-sidenav-toggle-button">
     <mat-icon *ngIf="!opened">
       menu
@@ -7,7 +7,13 @@
       menu_open
     </mat-icon>
   </button>
-  member tools
+  <div class="member-header-title-container">
+    <ng-container *ngFor="let char of headderTitleContent;">
+      <ng-container *ngFor="let item of char | keyvalue">
+        <span [style.font-size]="item.value" class="char-item">{{item.key}}</span>
+      </ng-container>
+    </ng-container>
+  </div>
   <evh-account-member-menu></evh-account-member-menu>
 </mat-toolbar>
 <div class="member-area-container">
