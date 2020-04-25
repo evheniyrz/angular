@@ -22,7 +22,6 @@ export class AccountMemberMenuComponent implements OnInit {
       takeUntil(this.onDestroy$)
     ).subscribe((data: LoggedUser) => {
       this.profile = data;
-      console.log(this.profile)
       this.menuButtonStyleConfig = {
         background: `#a39a8a url(${this.profile.picture})`,
         backgroundRepeat: 'no-repeat',

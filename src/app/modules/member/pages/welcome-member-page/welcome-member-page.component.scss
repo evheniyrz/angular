@@ -1,0 +1,95 @@
+.welcome-page-content-container {
+  .top-video-banner {
+    position: relative;
+    height: calc(100vh - 64px);
+    overflow: hidden;
+
+    .video-banner-player {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+    }
+
+    .overlay-content-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      color: #ffffff;
+      display: flex;
+      flex-flow: column;
+
+      .video-banner-title {
+        padding-left: 50px;
+
+        .video-banner-text-content {
+          font-family: 'Anurati', sans-serif;
+          font-size: 50px;
+          letter-spacing: 5px;
+          text-transform: uppercase;
+          color: inherit;
+          width: min-content;
+          margin-bottom: 0;
+
+          &:nth-child(2) {
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 20px;
+          }
+        }
+      }
+
+      .video-banner-description {
+        padding-right: 50px;
+        margin-top: auto;
+        margin-bottom: 50px;
+        display: flex;
+
+        .video-banner-view-more {
+          width: 270px;
+          text-align: center;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          overflow: visible;
+
+          .video-banner-view-more-text {
+            letter-spacing: 5px;
+            margin-right: 20px;
+          }
+        }
+
+        .video-banner-description-content {
+          font-size: 25px;
+          font-weight: 300;
+          max-width: 370px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  .space-child-container {
+    min-height: calc(100vh - 64px);
+    width: 420px;
+    background-image: url('/assets/space/space_child.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+  }
+}
+
+.evh-custom-menu-panel-class {
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+}

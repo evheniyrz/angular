@@ -6,7 +6,8 @@ import { MemberPageComponent } from './member-page.component';
 const routes: Routes = [
   {
     path: '',
-    component: MemberPageComponent
+    component: MemberPageComponent,
+    loadChildren: () => import('./pages/member-pages.module').then(m => m.MemberPagesModule)
   }
 ];
 

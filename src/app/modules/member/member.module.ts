@@ -6,7 +6,6 @@ import { MemberPageComponent } from './member-page.component';
 import { SharedMemberModule } from '../shared-member/shared-member.module';
 import { RouterModule } from '@angular/router';
 
-
 @NgModule({
   declarations: [MemberPageComponent],
   imports: [

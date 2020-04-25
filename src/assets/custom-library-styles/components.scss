@@ -1,0 +1,24 @@
+.menu-panel {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: #fff;
+  left: 100%;
+  overflow: hidden;
+  visibility: hidden;
+
+  &.menu-animation-open {
+    animation: menuWidth 0.6s ease-in-out normal forwards, menuHeight 1s 0.6s ease-in-out normal forwards;
+    -webkit-animation: menuWidth 0.6s ease-in-out normal forwards, menuHeight 1s 0.6s ease-in-out normal forwards;
+    -o-animation: menuWidth 0.6s ease-in-out normal forwards, menuHeight 1s 0.6s ease-in-out normal forwards;
+    -moz-animation: menuWidth 0.6s ease-in-out normal forwards, menuHeight 1s 0.6s ease-in-out normal forwards;
+
+  }
+
+  &.menu-animation-close {
+    animation: closeMenuHeight 0.6s ease-in-out forwards, closeMenuWidth 1s 0.6s ease-in-out forwards;
+    -webkit-animation: closeMenuHeight 0.6s ease-in-out forwards, closeMenuWidth 1s 0.6s ease-in-out forwards;
+    -o-animation: closeMenuHeight 0.6s ease-in-out forwards, closeMenuWidth 1s 0.6s ease-in-out forwards;
+    -moz-animation: closeMenuHeight 0.6s ease-in-out forwards, closeMenuWidth 1s 0.6s ease-in-out forwards;
+  }
+}
