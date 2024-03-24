@@ -6,10 +6,10 @@ import { PublicHomePageComponent } from './public-home-page/public-home-page.com
 
 
 @NgModule({
-  declarations: [PublicHomePageComponent],
-  imports: [
-    CommonModule,
-    PublicPagesRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        PublicPagesRoutingModule,
+        PublicHomePageComponent
+    ]
 })
 export class PublicPagesModule { }

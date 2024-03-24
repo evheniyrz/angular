@@ -7,11 +7,11 @@ import { AuthService } from './services/auth.service';
 
 
 @NgModule({
-  declarations: [AuthPageComponent],
-  imports: [
-    CommonModule,
-    AuthRoutingModule
-  ],
-  providers: []
+    imports: [
+        CommonModule,
+        AuthRoutingModule,
+        AuthPageComponent
+    ],
+    providers: []
 })
 export class AuthModule { }

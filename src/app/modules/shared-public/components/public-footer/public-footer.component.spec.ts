@@ -8,8 +8,8 @@ describe('PublicFooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PublicFooterComponent ]
-    })
+    imports: [PublicFooterComponent]
+})
     .compileComponents();
   }));
 

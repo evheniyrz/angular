@@ -2,11 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/modules/auth/services/auth.service';
 import { tap } from 'rxjs/operators';
 import { LoggedUser } from 'src/app/modules/auth/services/user-login-response/user-login-response.model';
+import { ProfileMenuComponent } from '../../../../shared/components/profile-menu/profile-menu.component';
+import { NgIf } from '@angular/common';
+import { RouterLinkActive, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'evh-public-header',
-  templateUrl: './public-header.component.html',
-  styleUrls: ['./public-header.component.scss']
+    selector: 'evh-public-header',
+    templateUrl: './public-header.component.html',
+    styleUrls: ['./public-header.component.scss'],
+    standalone: true,
+    imports: [RouterLinkActive, RouterLink, NgIf, ProfileMenuComponent]
 })
 export class PublicHeaderComponent implements OnInit {
 

@@ -8,8 +8,8 @@ describe('PublicHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PublicHeaderComponent ]
-    })
+    imports: [PublicHeaderComponent]
+})
     .compileComponents();
   }));
 

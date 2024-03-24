@@ -1,10 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LoggedUser } from 'src/app/modules/auth/services/user-login-response/user-login-response.model';
+import { NgStyle } from '@angular/common';
 
 @Component({
-  selector: 'evh-profile-menu',
-  templateUrl: './profile-menu.component.html',
-  styleUrls: ['./profile-menu.component.scss']
+    selector: 'evh-profile-menu',
+    templateUrl: './profile-menu.component.html',
+    styleUrls: ['./profile-menu.component.scss'],
+    standalone: true,
+    imports: [NgStyle]
 })
 export class ProfileMenuComponent implements OnInit {
 

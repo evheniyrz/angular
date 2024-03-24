@@ -2,11 +2,15 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { AuthService } from '../auth/services/auth.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { JsonPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'evh-member-page',
-  templateUrl: './member-page.component.html',
-  styleUrls: ['./member-page.component.scss']
+    selector: 'evh-member-page',
+    templateUrl: './member-page.component.html',
+    styleUrls: ['./member-page.component.scss'],
+    standalone: true,
+    imports: [RouterLink, JsonPipe]
 })
 export class MemberPageComponent implements OnInit, OnDestroy {
   public profile: any;

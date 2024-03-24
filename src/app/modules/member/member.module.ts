@@ -6,10 +6,10 @@ import { MemberPageComponent } from './member-page.component';
 
 
 @NgModule({
-  declarations: [MemberPageComponent],
-  imports: [
-    CommonModule,
-    MemberRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        MemberRoutingModule,
+        MemberPageComponent
+    ]
 })
 export class MemberModule { }
